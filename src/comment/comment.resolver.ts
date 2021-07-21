@@ -5,6 +5,10 @@ import { Args, Info, Mutation, Query, Resolver, Subscription } from '@nestjs/gra
 import { PubSub } from 'apollo-server-express';
 import { CurrentUser } from 'app_modules/current-user-decorator';
 import {
+    GraphqlFields,
+    GraphqlFieldsParameter,
+} from 'app_modules/nestjs-graphql-fields';
+import {
     GraphqlAuthGuard,
     OptionalGraphqlAuthGuard,
 } from 'app_modules/nestjs-passport-graphql-auth-guard';
@@ -16,10 +20,6 @@ import { AuthorGuard } from './author.guard';
 import { CommentService } from './comment.service';
 import { Comment } from './models/comment.model';
 import { CreateCommentInput } from './models/create-comment.input';
-import {
-    GraphqlFields,
-    GraphqlFieldsParameter,
-} from 'app_modules/nestjs-graphql-fields';
 
 /**
  * Resolver for article comment type.

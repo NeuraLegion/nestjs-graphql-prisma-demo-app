@@ -16,7 +16,8 @@ import { PRISMA_OPTIONS, PrismaModuleOptions } from './prisma.providers';
 @Injectable()
 export class PrismaRepository
     extends PrismaClient
-    implements OnModuleInit, OnModuleDestroy {
+    implements OnModuleInit, OnModuleDestroy
+{
     private readonly logger = new Logger();
 
     constructor(@Inject(PRISMA_OPTIONS) options: PrismaModuleOptions) {

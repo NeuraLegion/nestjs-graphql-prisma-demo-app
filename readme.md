@@ -29,7 +29,7 @@ to graphql api.
 
 -   `src` - Main application source code
 -   `src/api` - REST API wrapper under main application
--   `src/app.config.ts` - Application config file
+-   `src/app.environment.ts` - Application config file
 -   `prisma` - DB toolkit to query, migrate and model your database
 -   `@generated` - Generated code
 

@@ -30,16 +30,31 @@ export class IntWithAggregatesFilter {
     not?: IntWithAggregatesFilter;
 
     @Field(() => IntFilter, { nullable: true })
+    _count?: IntFilter;
+
+    @Field(() => IntFilter, { nullable: true })
     count?: IntFilter;
+
+    @Field(() => FloatFilter, { nullable: true })
+    _avg?: FloatFilter;
 
     @Field(() => FloatFilter, { nullable: true })
     avg?: FloatFilter;
 
     @Field(() => IntFilter, { nullable: true })
+    _sum?: IntFilter;
+
+    @Field(() => IntFilter, { nullable: true })
     sum?: IntFilter;
 
     @Field(() => IntFilter, { nullable: true })
+    _min?: IntFilter;
+
+    @Field(() => IntFilter, { nullable: true })
     min?: IntFilter;
+
+    @Field(() => IntFilter, { nullable: true })
+    _max?: IntFilter;
 
     @Field(() => IntFilter, { nullable: true })
     max?: IntFilter;

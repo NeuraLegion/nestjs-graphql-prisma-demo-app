@@ -1,14 +1,14 @@
 import { ArgsType, Field, Int } from '@nestjs/graphql';
 
-import { UserCountAggregateInput } from './user-count-aggregate.input';
-import { UserMaxAggregateInput } from './user-max-aggregate.input';
-import { UserMinAggregateInput } from './user-min-aggregate.input';
-import { UserOrderByInput } from './user-order-by.input';
-import { UserWhereInput } from './user-where.input';
-import { UserWhereUniqueInput } from './user-where-unique.input';
+import { UserCountAggregateInput } from '../user/user-count-aggregate.input';
+import { UserMaxAggregateInput } from '../user/user-max-aggregate.input';
+import { UserMinAggregateInput } from '../user/user-min-aggregate.input';
+import { UserOrderByInput } from '../user/user-order-by.input';
+import { UserWhereInput } from '../user/user-where.input';
+import { UserWhereUniqueInput } from '../user/user-where-unique.input';
 
 @ArgsType()
-export class AggregateUserArgs {
+export class UserAggregateArgs {
     @Field(() => UserWhereInput, { nullable: true })
     where?: UserWhereInput;
 
@@ -25,11 +25,11 @@ export class AggregateUserArgs {
     skip?: number;
 
     @Field(() => UserCountAggregateInput, { nullable: true })
-    count?: UserCountAggregateInput;
+    _count?: UserCountAggregateInput;
 
     @Field(() => UserMinAggregateInput, { nullable: true })
-    min?: UserMinAggregateInput;
+    _min?: UserMinAggregateInput;
 
     @Field(() => UserMaxAggregateInput, { nullable: true })
-    max?: UserMaxAggregateInput;
+    _max?: UserMaxAggregateInput;
 }

@@ -6,6 +6,7 @@ import {
     extendMapItem,
     mapItemBases,
 } from 'apollo-error-converter';
+import { PubSub } from 'apollo-server-express';
 import { PrismaModule } from 'app_modules/prisma';
 import { Request } from 'express';
 import { NestologModule } from 'nestolog';
@@ -16,7 +17,6 @@ import { ArticleModule } from './article/article.module';
 import { CommentModule } from './comment/comment.module';
 import { TagModule } from './tag/tag.module';
 import { UserModule } from './user/user.module';
-import { PubSub } from 'apollo-server-express';
 
 export async function graphqlModuleFactory(logger: Logger) {
     return {

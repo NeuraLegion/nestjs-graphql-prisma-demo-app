@@ -25,11 +25,11 @@ export class UserGroupBy {
     image?: string;
 
     @Field(() => UserCountAggregate, { nullable: true })
-    count?: UserCountAggregate;
+    _count?: UserCountAggregate;
 
     @Field(() => UserMinAggregate, { nullable: true })
-    min?: UserMinAggregate;
+    _min?: UserMinAggregate;
 
     @Field(() => UserMaxAggregate, { nullable: true })
-    max?: UserMaxAggregate;
+    _max?: UserMaxAggregate;
 }

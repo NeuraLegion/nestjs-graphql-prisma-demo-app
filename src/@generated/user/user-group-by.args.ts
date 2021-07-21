@@ -9,7 +9,7 @@ import { UserScalarWhereWithAggregatesInput } from './user-scalar-where-with-agg
 import { UserWhereInput } from './user-where.input';
 
 @ArgsType()
-export class GroupByUserArgs {
+export class UserGroupByArgs {
     @Field(() => UserWhereInput, { nullable: true })
     where?: UserWhereInput;
 
@@ -29,11 +29,11 @@ export class GroupByUserArgs {
     skip?: number;
 
     @Field(() => UserCountAggregateInput, { nullable: true })
-    count?: UserCountAggregateInput;
+    _count?: UserCountAggregateInput;
 
     @Field(() => UserMinAggregateInput, { nullable: true })
-    min?: UserMinAggregateInput;
+    _min?: UserMinAggregateInput;
 
     @Field(() => UserMaxAggregateInput, { nullable: true })
-    max?: UserMaxAggregateInput;
+    _max?: UserMaxAggregateInput;
 }
