@@ -43,7 +43,8 @@ async function main() {
 
     await app.listen(appEnvironment.port);
     const logger = app.get(Logger);
-    app.useLogger(logger);
+    // app.useLogger(logger);
+    app.useLogger(app.get(NestoLogger));
 
     logger.log(`GraphQL application is running on: ${await app.getUrl()}`, 'main');
 }

@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 import { Article, Prisma } from '@prisma/client';
 
 import { TagService } from '../tag/tag.service';
@@ -111,7 +111,8 @@ export class ArticleService {
      * Get count article by condition.
      */
     async count(where: Prisma.ArticleWhereInput) {
-        return this.repository.count({ where });
+        const result = await this.repository.count({ where });
+        return result;
     }
 
     /**
