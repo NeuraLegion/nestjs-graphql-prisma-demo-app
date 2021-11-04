@@ -1,12 +1,14 @@
 import { ArgsType, Field, Int } from '@nestjs/graphql';
 
+import { TagCountAggregateInput } from './tag-count-aggregate.input';
+import { TagMaxAggregateInput } from './tag-max-aggregate.input';
+import { TagMinAggregateInput } from './tag-min-aggregate.input';
 import { TagOrderByWithRelationInput } from './tag-order-by-with-relation.input';
-import { TagScalarFieldEnum } from './tag-scalar-field.enum';
 import { TagWhereInput } from './tag-where.input';
 import { TagWhereUniqueInput } from './tag-where-unique.input';
 
 @ArgsType()
-export class FindFirstTagArgs {
+export class TagAggregateArgs {
     @Field(() => TagWhereInput, { nullable: true })
     where?: TagWhereInput;
 
@@ -22,6 +24,12 @@ export class FindFirstTagArgs {
     @Field(() => Int, { nullable: true })
     skip?: number;
 
-    @Field(() => [TagScalarFieldEnum], { nullable: true })
-    distinct?: Array<keyof typeof TagScalarFieldEnum>;
+    @Field(() => TagCountAggregateInput, { nullable: true })
+    _count?: TagCountAggregateInput;
+
+    @Field(() => TagMinAggregateInput, { nullable: true })
+    _min?: TagMinAggregateInput;
+
+    @Field(() => TagMaxAggregateInput, { nullable: true })
+    _max?: TagMaxAggregateInput;
 }

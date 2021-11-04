@@ -4,25 +4,21 @@ import { ArticleAvgAggregateInput } from './article-avg-aggregate.input';
 import { ArticleCountAggregateInput } from './article-count-aggregate.input';
 import { ArticleMaxAggregateInput } from './article-max-aggregate.input';
 import { ArticleMinAggregateInput } from './article-min-aggregate.input';
-import { ArticleOrderByWithAggregationInput } from './article-order-by-with-aggregation.input';
-import { ArticleScalarFieldEnum } from './article-scalar-field.enum';
-import { ArticleScalarWhereWithAggregatesInput } from './article-scalar-where-with-aggregates.input';
+import { ArticleOrderByWithRelationInput } from './article-order-by-with-relation.input';
 import { ArticleSumAggregateInput } from './article-sum-aggregate.input';
 import { ArticleWhereInput } from './article-where.input';
+import { ArticleWhereUniqueInput } from './article-where-unique.input';
 
 @ArgsType()
-export class ArticleGroupByArgs {
+export class ArticleAggregateArgs {
     @Field(() => ArticleWhereInput, { nullable: true })
     where?: ArticleWhereInput;
 
-    @Field(() => [ArticleOrderByWithAggregationInput], { nullable: true })
-    orderBy?: Array<ArticleOrderByWithAggregationInput>;
+    @Field(() => [ArticleOrderByWithRelationInput], { nullable: true })
+    orderBy?: Array<ArticleOrderByWithRelationInput>;
 
-    @Field(() => [ArticleScalarFieldEnum], { nullable: false })
-    by!: Array<keyof typeof ArticleScalarFieldEnum>;
-
-    @Field(() => ArticleScalarWhereWithAggregatesInput, { nullable: true })
-    having?: ArticleScalarWhereWithAggregatesInput;
+    @Field(() => ArticleWhereUniqueInput, { nullable: true })
+    cursor?: ArticleWhereUniqueInput;
 
     @Field(() => Int, { nullable: true })
     take?: number;

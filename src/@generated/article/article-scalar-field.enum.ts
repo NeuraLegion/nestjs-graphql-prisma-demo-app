@@ -12,4 +12,7 @@ export enum ArticleScalarFieldEnum {
     authorId = 'authorId',
 }
 
-registerEnumType(ArticleScalarFieldEnum, { name: 'ArticleScalarFieldEnum' });
+registerEnumType(ArticleScalarFieldEnum, {
+    name: 'ArticleScalarFieldEnum',
+    description: undefined,
+});

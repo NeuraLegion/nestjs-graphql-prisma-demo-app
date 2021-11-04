@@ -9,18 +9,9 @@ export class AggregateTag {
     @Field(() => TagCountAggregate, { nullable: true })
     _count?: TagCountAggregate;
 
-    @Field(() => TagCountAggregate, { nullable: true })
-    count?: TagCountAggregate;
-
     @Field(() => TagMinAggregate, { nullable: true })
     _min?: TagMinAggregate;
 
-    @Field(() => TagMinAggregate, { nullable: true })
-    min?: TagMinAggregate;
-
     @Field(() => TagMaxAggregate, { nullable: true })
     _max?: TagMaxAggregate;
-
-    @Field(() => TagMaxAggregate, { nullable: true })
-    max?: TagMaxAggregate;
 }

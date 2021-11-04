@@ -3,6 +3,7 @@ import { Field, ID, Int, ObjectType } from '@nestjs/graphql';
 import { Comment } from '../comment/comment.model';
 import { Tag } from '../tag/tag.model';
 import { User } from '../user/user.model';
+import { ArticleCount } from './article-count.output';
 
 @ObjectType()
 export class Article {
@@ -22,7 +23,7 @@ export class Article {
     body!: string;
 
     @Field(() => [Tag], { nullable: true })
-    tags!: Array<Tag>;
+    tags?: Array<Tag>;
 
     @Field(() => Date, { nullable: false })
     createdAt!: Date;
@@ -34,14 +35,17 @@ export class Article {
     favoritesCount!: number;
 
     @Field(() => User, { nullable: true })
-    author!: User;
+    author?: User | null;
 
     @Field(() => String, { nullable: true })
     authorId!: string | null;
 
     @Field(() => [User], { nullable: true })
-    favoritedBy!: Array<User>;
+    favoritedBy?: Array<User>;
 
     @Field(() => [Comment], { nullable: true })
-    comments!: Array<Comment>;
+    comments?: Array<Comment>;
+
+    @Field(() => ArticleCount, { nullable: true })
+    _count?: ArticleCount | null;
 }

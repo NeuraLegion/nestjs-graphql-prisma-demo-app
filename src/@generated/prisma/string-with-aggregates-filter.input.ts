@@ -41,18 +41,9 @@ export class StringWithAggregatesFilter {
     @Field(() => IntFilter, { nullable: true })
     _count?: IntFilter;
 
-    @Field(() => IntFilter, { nullable: true })
-    count?: IntFilter;
-
     @Field(() => StringFilter, { nullable: true })
     _min?: StringFilter;
 
     @Field(() => StringFilter, { nullable: true })
-    min?: StringFilter;
-
-    @Field(() => StringFilter, { nullable: true })
     _max?: StringFilter;
-
-    @Field(() => StringFilter, { nullable: true })
-    max?: StringFilter;
 }

@@ -32,18 +32,9 @@ export class DateTimeWithAggregatesFilter {
     @Field(() => IntFilter, { nullable: true })
     _count?: IntFilter;
 
-    @Field(() => IntFilter, { nullable: true })
-    count?: IntFilter;
-
     @Field(() => DateTimeFilter, { nullable: true })
     _min?: DateTimeFilter;
 
     @Field(() => DateTimeFilter, { nullable: true })
-    min?: DateTimeFilter;
-
-    @Field(() => DateTimeFilter, { nullable: true })
     _max?: DateTimeFilter;
-
-    @Field(() => DateTimeFilter, { nullable: true })
-    max?: DateTimeFilter;
 }
