@@ -17,14 +17,14 @@ export class UserUpdateOneWithoutArticlesInput {
     @Field(() => UserUpsertWithoutArticlesInput, { nullable: true })
     upsert?: UserUpsertWithoutArticlesInput;
 
-    @Field(() => UserWhereUniqueInput, { nullable: true })
-    connect?: UserWhereUniqueInput;
-
     @Field(() => Boolean, { nullable: true })
     disconnect?: boolean;
 
     @Field(() => Boolean, { nullable: true })
     delete?: boolean;
+
+    @Field(() => UserWhereUniqueInput, { nullable: true })
+    connect?: UserWhereUniqueInput;
 
     @Field(() => UserUpdateWithoutArticlesInput, { nullable: true })
     update?: UserUpdateWithoutArticlesInput;

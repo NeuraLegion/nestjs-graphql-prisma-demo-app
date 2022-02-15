@@ -46,6 +46,6 @@ export class Article {
     @Field(() => [Comment], { nullable: true })
     comments?: Array<Comment>;
 
-    @Field(() => ArticleCount, { nullable: true })
-    _count?: ArticleCount | null;
+    @Field(() => ArticleCount, { nullable: false })
+    _count?: ArticleCount;
 }

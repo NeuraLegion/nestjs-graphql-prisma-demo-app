@@ -20,9 +20,6 @@ export class ArticleUpdateManyWithoutAuthorInput {
     upsert?: Array<ArticleUpsertWithWhereUniqueWithoutAuthorInput>;
 
     @Field(() => [ArticleWhereUniqueInput], { nullable: true })
-    connect?: Array<ArticleWhereUniqueInput>;
-
-    @Field(() => [ArticleWhereUniqueInput], { nullable: true })
     set?: Array<ArticleWhereUniqueInput>;
 
     @Field(() => [ArticleWhereUniqueInput], { nullable: true })
@@ -30,6 +27,9 @@ export class ArticleUpdateManyWithoutAuthorInput {
 
     @Field(() => [ArticleWhereUniqueInput], { nullable: true })
     delete?: Array<ArticleWhereUniqueInput>;
+
+    @Field(() => [ArticleWhereUniqueInput], { nullable: true })
+    connect?: Array<ArticleWhereUniqueInput>;
 
     @Field(() => [ArticleUpdateWithWhereUniqueWithoutAuthorInput], { nullable: true })
     update?: Array<ArticleUpdateWithWhereUniqueWithoutAuthorInput>;

@@ -36,6 +36,6 @@ export { User } from '../../user/models/user.model';
 //     @Field(() => [Comment], {nullable:true})
 //     comments?: Array<Comment>;
 //
-//     @Field(() => UserCount, {nullable:true})
-//     _count?: UserCount | null;
+//     @Field(() => UserCount, {nullable:false})
+//     _count?: UserCount;
 // }

@@ -111,8 +111,7 @@ export class ArticleService {
      * Get count article by condition.
      */
     async count(where: Prisma.ArticleWhereInput) {
-        const result = await this.repository.count({ where });
-        return result;
+        return await this.repository.count({ where });
     }
 
     /**

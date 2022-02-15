@@ -20,9 +20,6 @@ export class CommentUncheckedUpdateManyWithoutAuthorInput {
     upsert?: Array<CommentUpsertWithWhereUniqueWithoutAuthorInput>;
 
     @Field(() => [CommentWhereUniqueInput], { nullable: true })
-    connect?: Array<CommentWhereUniqueInput>;
-
-    @Field(() => [CommentWhereUniqueInput], { nullable: true })
     set?: Array<CommentWhereUniqueInput>;
 
     @Field(() => [CommentWhereUniqueInput], { nullable: true })
@@ -30,6 +27,9 @@ export class CommentUncheckedUpdateManyWithoutAuthorInput {
 
     @Field(() => [CommentWhereUniqueInput], { nullable: true })
     delete?: Array<CommentWhereUniqueInput>;
+
+    @Field(() => [CommentWhereUniqueInput], { nullable: true })
+    connect?: Array<CommentWhereUniqueInput>;
 
     @Field(() => [CommentUpdateWithWhereUniqueWithoutAuthorInput], { nullable: true })
     update?: Array<CommentUpdateWithWhereUniqueWithoutAuthorInput>;
