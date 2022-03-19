@@ -1,5 +1,5 @@
+import { inspect } from 'node:util';
 import request from 'supertest';
-import { inspect } from 'util';
 
 import { createApp } from '../src/main';
 import { Await } from '../src/types';

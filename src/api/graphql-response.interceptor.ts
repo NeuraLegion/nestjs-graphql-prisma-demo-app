@@ -27,7 +27,6 @@ export class GraphQLResponseInterceptor implements NestInterceptor {
                 if (
                     isValidationError(validationErrors) ||
                     (Array.isArray(validationErrors) &&
-                        validationErrors.length > 0 &&
                         validationErrors.some(error => isValidationError(error)))
                 ) {
                     const message = classValidatorFlatFormatter(validationErrors);

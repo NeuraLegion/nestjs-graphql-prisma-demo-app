@@ -2,6 +2,8 @@ import { Field, InputType } from '@nestjs/graphql';
 
 import { ArticleUncheckedCreateNestedManyWithoutAuthorInput } from '../article/article-unchecked-create-nested-many-without-author.input';
 import { CommentUncheckedCreateNestedManyWithoutAuthorInput } from '../comment/comment-unchecked-create-nested-many-without-author.input';
+import { UserUncheckedCreateNestedManyWithoutFollowersInput } from './user-unchecked-create-nested-many-without-followers.input';
+import { UserUncheckedCreateNestedManyWithoutFollowingInput } from './user-unchecked-create-nested-many-without-following.input';
 
 @InputType()
 export class UserUncheckedCreateWithoutFavoriteArticlesInput {
@@ -22,6 +24,12 @@ export class UserUncheckedCreateWithoutFavoriteArticlesInput {
 
     @Field(() => String, { nullable: true })
     image?: string;
+
+    @Field(() => UserUncheckedCreateNestedManyWithoutFollowersInput, { nullable: true })
+    following?: UserUncheckedCreateNestedManyWithoutFollowersInput;
+
+    @Field(() => UserUncheckedCreateNestedManyWithoutFollowingInput, { nullable: true })
+    followers?: UserUncheckedCreateNestedManyWithoutFollowingInput;
 
     @Field(() => ArticleUncheckedCreateNestedManyWithoutAuthorInput, { nullable: true })
     articles?: ArticleUncheckedCreateNestedManyWithoutAuthorInput;

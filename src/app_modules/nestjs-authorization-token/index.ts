@@ -1,5 +1,5 @@
 import { createParamDecorator, ExecutionContext } from '@nestjs/common';
-import { IncomingMessage } from 'http';
+import { IncomingMessage } from 'node:http';
 
 // tslint:disable-next-line:variable-name
 export const AuthorizationToken = createParamDecorator(

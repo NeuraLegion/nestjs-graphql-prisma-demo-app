@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { JwtService } from '@nestjs/jwt';
-import { randomBytes } from 'crypto';
+import { randomBytes } from 'node:crypto';
 
 import { AppEnvironment } from '../app.environment';
 import { User } from '../user/models/user.model';

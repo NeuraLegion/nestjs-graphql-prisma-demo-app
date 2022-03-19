@@ -22,6 +22,9 @@ export class ArticleCreateInput {
     @Field(() => String, { nullable: false })
     body!: string;
 
+    @Field(() => TagCreateNestedManyWithoutArticlesInput, { nullable: true })
+    tags?: TagCreateNestedManyWithoutArticlesInput;
+
     @Field(() => Date, { nullable: true })
     createdAt?: Date | string;
 
@@ -30,9 +33,6 @@ export class ArticleCreateInput {
 
     @Field(() => Int, { nullable: true })
     favoritesCount?: number;
-
-    @Field(() => TagCreateNestedManyWithoutArticlesInput, { nullable: true })
-    tags?: TagCreateNestedManyWithoutArticlesInput;
 
     @Field(() => UserCreateNestedOneWithoutArticlesInput, { nullable: true })
     author?: UserCreateNestedOneWithoutArticlesInput;

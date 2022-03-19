@@ -24,7 +24,7 @@ export class AppEnvironment {
      */
     @IsNumber()
     @Min(0)
-    @Max(65535)
+    @Max(65_535)
     readonly port = 3000;
 
     @Env('NODE_ENV')

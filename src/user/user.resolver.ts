@@ -17,9 +17,9 @@ import {
     GraphqlAuthGuard,
     OptionalGraphqlAuthGuard,
 } from 'app_modules/nestjs-passport-graphql-auth-guard';
-import assert from 'assert';
 import DataLoader from 'dataloader';
 import { GraphQLResolveInfo } from 'graphql';
+import assert from 'node:assert';
 
 import { AuthService } from '../auth/auth.service';
 import { SessionService } from '../auth/session.service';

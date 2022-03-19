@@ -1,7 +1,7 @@
 import { Inject, Provider, Scope } from '@nestjs/common';
 import { REQUEST } from '@nestjs/core';
 import { Request } from 'express';
-import { IncomingMessage } from 'http';
+import { IncomingMessage } from 'node:http';
 
 export const RequestIdToken = Symbol('RequestId');
 

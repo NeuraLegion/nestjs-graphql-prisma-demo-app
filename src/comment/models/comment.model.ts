@@ -1,3 +1,1 @@
-import { Comment } from '@generated/comment/comment.model';
-
-export { Comment };
+export { Comment } from '@generated/comment/comment.model';

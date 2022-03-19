@@ -1,3 +1,1 @@
-import { Article } from '@generated/article/article.model';
-
-export { Article };
+export { Article } from '@generated/article/article.model';

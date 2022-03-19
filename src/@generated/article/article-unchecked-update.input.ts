@@ -1,6 +1,8 @@
 import { Field, InputType, Int } from '@nestjs/graphql';
 
 import { CommentUncheckedUpdateManyWithoutArticleInput } from '../comment/comment-unchecked-update-many-without-article.input';
+import { TagUncheckedUpdateManyWithoutArticlesInput } from '../tag/tag-unchecked-update-many-without-articles.input';
+import { UserUncheckedUpdateManyWithoutFavoriteArticlesInput } from '../user/user-unchecked-update-many-without-favorite-articles.input';
 
 @InputType()
 export class ArticleUncheckedUpdateInput {
@@ -19,6 +21,9 @@ export class ArticleUncheckedUpdateInput {
     @Field(() => String, { nullable: true })
     body?: string;
 
+    @Field(() => TagUncheckedUpdateManyWithoutArticlesInput, { nullable: true })
+    tags?: TagUncheckedUpdateManyWithoutArticlesInput;
+
     @Field(() => Date, { nullable: true })
     createdAt?: Date | string;
 
@@ -30,6 +35,11 @@ export class ArticleUncheckedUpdateInput {
 
     @Field(() => String, { nullable: true })
     authorId?: string;
+
+    @Field(() => UserUncheckedUpdateManyWithoutFavoriteArticlesInput, {
+        nullable: true,
+    })
+    favoritedBy?: UserUncheckedUpdateManyWithoutFavoriteArticlesInput;
 
     @Field(() => CommentUncheckedUpdateManyWithoutArticleInput, { nullable: true })
     comments?: CommentUncheckedUpdateManyWithoutArticleInput;

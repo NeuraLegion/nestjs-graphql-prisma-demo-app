@@ -3,17 +3,17 @@ import { Field, Int, ObjectType } from '@nestjs/graphql';
 @ObjectType()
 export class UserCount {
     @Field(() => Int, { nullable: false })
-    following!: number;
+    following?: number;
 
     @Field(() => Int, { nullable: false })
-    followers!: number;
+    followers?: number;
 
     @Field(() => Int, { nullable: false })
-    favoriteArticles!: number;
+    favoriteArticles?: number;
 
     @Field(() => Int, { nullable: false })
-    articles!: number;
+    articles?: number;
 
     @Field(() => Int, { nullable: false })
-    comments!: number;
+    comments?: number;
 }

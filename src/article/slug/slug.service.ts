@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import slugify from '@sindresorhus/slugify';
-import { randomBytes } from 'crypto';
+import { randomBytes } from 'node:crypto';
 
 /**
  * Service for generate slug for article.

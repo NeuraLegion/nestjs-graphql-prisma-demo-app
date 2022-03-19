@@ -28,8 +28,8 @@ import {
     GraphqlAuthGuard,
     OptionalGraphqlAuthGuard,
 } from 'app_modules/nestjs-passport-graphql-auth-guard';
-import assert from 'assert';
 import { GraphQLResolveInfo } from 'graphql';
+import assert from 'node:assert';
 import { PlainObject } from 'simplytyped';
 
 import { PassportUserFields } from '../types';

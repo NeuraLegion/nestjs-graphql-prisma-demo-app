@@ -21,6 +21,9 @@ export class ArticleUpdateWithoutFavoritedByInput {
     @Field(() => String, { nullable: true })
     body?: string;
 
+    @Field(() => TagUpdateManyWithoutArticlesInput, { nullable: true })
+    tags?: TagUpdateManyWithoutArticlesInput;
+
     @Field(() => Date, { nullable: true })
     createdAt?: Date | string;
 
@@ -29,9 +32,6 @@ export class ArticleUpdateWithoutFavoritedByInput {
 
     @Field(() => Int, { nullable: true })
     favoritesCount?: number;
-
-    @Field(() => TagUpdateManyWithoutArticlesInput, { nullable: true })
-    tags?: TagUpdateManyWithoutArticlesInput;
 
     @Field(() => UserUpdateOneWithoutArticlesInput, { nullable: true })
     author?: UserUpdateOneWithoutArticlesInput;
